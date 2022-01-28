@@ -1,0 +1,189 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    background-image: linear-gradient(to right, rgba(255,0,0,1), hsl(350, 100%, 88%));
+    padding: 10px 20px;
+    color: rgba(255, 255, 255, 0.932);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: titulo;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("img/fondoChristmas.png");    
+    /*background-color: hotpink;*/
+    /*background-image: linear-gradient(to right, #3acfd5, #3a4ed5);*/
+}
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+        "titulo titulo titulo"
+        "sidebar-right blog sidebar-left"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 40px 1fr 300px;
+    gap: 10px;
+   /* background-color: turquoise;*/
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.897);
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    padding: 20px 20px;
+    background-image: linear-gradient(to right, #f1667d, #ff0000);
+    border: 3px solid;
+    opacity: 0.8;
+    font-weight: bold;
+    border-radius: 15px 55px 15px 55px;
+}
+
+.subtitle span {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.sidebar-right {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar-right;
+    padding: 10px;
+    text-align: center;
+    background-color: yellow;
+}
+
+.sidebar-left {
+    display: flex;
+    flex-direction: column;
+    grid-area: sidebar-left;
+    padding: 10px;
+    text-align: center;
+    text-align: justify;
+    background-color: yellow;
+}
+
+.sidebar-right img {
+    width: 100%;
+}
+
+.sidebar-left img {
+    width: 100%;
+}
+
+.footer {
+    /*background-color: green;*/
+    background-image: linear-gradient(to right, rgba(255,0,0,1), hsl(350, 100%, 88%));
+    grid-area: footer;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer form h1 {
+    color: rgb(8, 6, 175);
+}
+
+
+.footer form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+    grid-area: footer;
+    background-image: url("img/snowman.png");
+    
+}
+
+.footer form .inputText {
+    padding: 7px;
+    /*border: 2px solid red;*/  
+    border: none;  
+    border-radius: 15px;  
+    padding: 20px 20px;
+    border: 7px solid;
+    border-image: linear-gradient(to bottom, #0e0ae9c9 0%, #0fb0e0 100%) 1;    
+    border-radius: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    font-size: 1.2;
+}
+
+.container 
+.footer 
+form 
+.submitEnviar{
+    background-color: red;
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: #fff;
+    width: 100px;
+    font-size: 1em;
+}
+
+.container 
+.footer 
+form 
+.submitEnviar:hover{
+    background-color: blue;
+}
+
+
+.blog {
+    grid-area: blog;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog .coments {
+    box-shadow: 6px 6px 9px -3px rgba(0, 0, 0, 0.41);
+    -webkit-box-shadow: 6px 6px 9px -3px rgba(0, 0, 0, 0.41);
+    -moz-box-shadown: 6px 6px 9px -3px rgba(0, 0, 0, 0.41);
+    border:  1px solid rgba(0, 0, 0, 0.21);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-size: 10pm;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    color: royalblue;
+    background-color: salmon;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        height: 100%;
+        display: grid;
+        grid-template-areas:
+          "titulo"
+          "sidebar-right"
+          "blog"
+          /*"sidebarderecho"*/
+          "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5,1fr);
+        gap: 10px;
+      }
+}
+
